@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Space Apps - Air Quality</title>
+</head>
+<body>
+    <h1>Space Apps - Air Quality</h1>
+    <p>
+        <a href="/download/">Iniciar descarga</a> |
+        <a href="/plot/">Generar plots</a> |
+        <a href="/excel/">Generar y descargar Excel</a>
+    </p>
+
+    <h2>Imágenes generadas</h2>
+    {% if images %}
+        {% for img in images %}
+            <div style="margin-bottom:10px;">
+                <img src="/static/air_quality/plots/{{ img }}" alt="{{ img }}" style="max-width:600px;" />
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay imágenes generadas. Ejecuta "Generar plots" después de descargar datos.</p>
+    {% endif %}
+</body>
+</html>

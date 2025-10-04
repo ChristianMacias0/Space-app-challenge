@@ -205,3 +205,21 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# TEMPO downloads (archivos NetCDF descargados por los scripts)
+TEMPO_downloads/
+# also ignore if created inside the Django project folder
+nasa_project/TEMPO_downloads/
+# ignore any nested TEMPO_downloads under Tres too
+Tres/TEMPO_downloads/
+
+# macOS metadata
+.DS_Store
+
+# Carpetas de datos generados
+data/
+
+# Estado de descarga generado dinámicamente
+static/air_quality/download_status.json
+
+
